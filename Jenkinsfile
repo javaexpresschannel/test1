@@ -25,9 +25,9 @@ pipeline {
             steps {
                 sh '''
                mvn sonar:sonar \
- 					 -Dsonar.projectKey=javaexpressproject  \
- 					 -Dsonar.host.url=http://3.71.78.75:9000 \
-  					 -Dsonar.login=9bc131dfbf179c0fad4a02588e0fe9e882a7af32
+  			-Dsonar.projectKey=springdboo_docker_k8s \
+  			-Dsonar.host.url=http://3.125.6.250:9000 \
+ 			 -Dsonar.login=ea89ea5db609e2458009ffe52ce8f9033fa6f042
                 '''
             }
         } 
