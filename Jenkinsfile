@@ -24,10 +24,10 @@ pipeline {
         stage('sonar') { 
             steps {
                 sh '''
-               mvn sonar:sonar \
-  			-Dsonar.projectKey=springdboo_docker_k8s \
-  			-Dsonar.host.url=http://3.125.6.250:9000 \
- 			 -Dsonar.login=ea89ea5db609e2458009ffe52ce8f9033fa6f042
+               mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=springboot \
+  -Dsonar.host.url=http://15.206.74.52:9000 \
+  -Dsonar.login=sqp_f0d3d5e221af10211f76eb788b51dc3ef0f614cd
                 '''
             }
         } 
