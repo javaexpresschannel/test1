@@ -48,7 +48,13 @@ pipeline {
                 sh 'docker push javaexpress/springboot_docker_k8s_sonar:latest'
             }
         } 
-        
+        stage("Deploy artifacts to nexus"){
+    		steps {
+                withMaven(globalMavenSettingsConfig: 'maven-setting', jdk: 'jdk17', maven: 'MAVEN', mavenSettingsConfig: '', traceability: true) {
+    			sh 'mvn deploy'
+		}
+            }
+    	} 
     	stage("kubernetes deployment"){
     		steps {
                 sh 'kubectl apply -f k8s-spring-boot-deployment.yml'
