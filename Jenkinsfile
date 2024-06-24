@@ -23,10 +23,10 @@ pipeline {
         stage('sonar') { 
             steps {
                 sh '''
-               mvn clean verify sonar:sonar \
+mvn clean verify sonar:sonar \
   -Dsonar.projectKey=springboot \
-  -Dsonar.host.url=http://15.206.74.52:9000 \
-  -Dsonar.login=sqp_f0d3d5e221af10211f76eb788b51dc3ef0f614cd
+  -Dsonar.host.url=http://3.67.133.94:9000 \
+  -Dsonar.login=sqp_425393f1bdb571ad567c5bcbbc45e0a4ba3cd1b2
                 '''
             }
         } 
