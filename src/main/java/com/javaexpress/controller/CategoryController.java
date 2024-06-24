@@ -55,7 +55,7 @@ public class CategoryController {
 		 return categoryService.fetchCategory(categoryName);
 	}
 	
-	@GetMapping("/hello")
+	@GetMapping("/hello1")
 	public String getHello() {
 		return "Hello Controller";
 	}
